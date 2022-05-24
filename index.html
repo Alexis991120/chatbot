@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es" >
+<head>
+  <meta charset="UTF-8">
+  <title>Chatbot Tesjo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato'><link rel="stylesheet" href="./style.css">
+  <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+
+<!-- Chatbot -->
+</head>
+<body>
+
+
+<!-- partial:index.partial.html -->
+<button class="chatbox-open">
+    <i class="fa fa-comment fa-2x" aria-hidden="true"></i>
+  </button>
+<button class="chatbox-close">
+    <i class="fa fa-close fa-2x" aria-hidden="true"></i>
+  </button>
+<section class="chatbox-popup">
+  <header class="chatbox-popup__header">
+    <aside style="flex:3">
+      <i class="fa fa-user-circle fa-4x chatbox-popup__avatar" aria-hidden="true"></i>
+    </aside>
+    <aside style="flex:8">
+      <h1>Tesjo</h1>(En linea)
+  </header>
+  <main class="chatbox-popup__main">
+    <div id="test-output"></div>
+<py-script src="chatbot.py">
+</py-script>
+</div>
+</main>
+  <footer class="chatbox-popup__footer">
+    <aside style="flex:1;color:#888;text-align:center;">
+
+    </aside>
+    <aside >
+      <div class="chatbox__footer">
+        <input id="user_input"  type="text" placeholder="Escribe aqui..." onFocus="vaciar(this)">
+        <button id="bnt-send"  type="submit" pys-onClick="get_response" style="padding: 20px;" onclick="scrollWin()">
+          <d>Enviar</d>
+        </button>
+      </div>
+    </aside>
+
+    <script>
+      function scrollWin() {
+        window.scrollTo(0, 500);
+      }
+      </script>
+
+
+    <script>
+      function vaciar(control) {
+          control.value = '';
+      }
+
+      function verificarEntrada(control) {
+          alert('ingreso:' + control.value);
+      }
+  </script>
+
+
+
+  </footer>
+</section>
+
+<!-- partial -->
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script><script  src="./script.js"></script>
+</html>
